@@ -40,7 +40,7 @@ export const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      axios.post('http://localhost:5000/register', {
+      axios.post('https://art-gallery-backend-dl89.onrender.com/register', {
         email: formData.email,
         username: formData.username,
         password: formData.password

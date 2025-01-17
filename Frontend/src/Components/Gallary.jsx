@@ -10,7 +10,7 @@ export const Gallary = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/images");
+        const response = await axios.get("https://art-gallery-backend-dl89.onrender.com/images");
         setImages(response.data);
       } catch (error) {
         console.log("Error fetching images:", error);
@@ -48,7 +48,7 @@ export const Gallary = () => {
             onClick={() => handleImageClick(image)}
           >
             <img
-              src={`http://localhost:5000/${image.imageUrl}`}
+              src={`https://art-gallery-backend-dl89.onrender.com/${image.imageUrl}`}
               alt={image.name}
               style={styles.image}
             />
@@ -62,7 +62,7 @@ export const Gallary = () => {
           <div style={styles.popup}>
             <div style={styles.popupLeft}>
               <img
-                src={`http://localhost:5000/${selectedImage.imageUrl}`}
+                src={`https://art-gallery-backend-dl89.onrender.com/${selectedImage.imageUrl}`}
                 alt={selectedImage.name}
                 style={styles.popupImage}
               />

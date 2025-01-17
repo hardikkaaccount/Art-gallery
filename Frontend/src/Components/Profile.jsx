@@ -22,7 +22,7 @@ const Profile = () => {
 
     // Fetch user profile data along with artworks
     axios
-      .get(`http://localhost:5000/profile/${userId}`)
+      .get(`https://art-gallery-backend-dl89.onrender.com/profile/${userId}`)
       .then((response) => {
         setUserData(response.data);
         setLoading(false);
@@ -58,7 +58,7 @@ const Profile = () => {
             <p>{userData.bio}</p>
             {userData.avatar && (
               <img
-                src={`http://localhost:5000/${userData.avatar}`}
+                src={`https://art-gallery-backend-dl89.onrender.com/${userData.avatar}`}
                 alt="Avatar"
                 style={styles.avatar}
               />
@@ -84,7 +84,7 @@ const Profile = () => {
                 {userData.artworks.map((artwork) => (
                   <div key={artwork._id} style={styles.artworkCard}>
                     <img
-                      src={`http://localhost:5000/${artwork.imageUrl}`}
+                      src={`https://art-gallery-backend-dl89.onrender.com/${artwork.imageUrl}`}
                       alt={artwork.name}
                       style={styles.artworkImage}
                     />

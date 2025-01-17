@@ -28,7 +28,7 @@ const Upload = () => {
     formData.append("description", description); // Send description
 
     try {
-      const response = await axios.post("http://localhost:5000/upload", formData, {
+      const response = await axios.post("https://art-gallery-backend-dl89.onrender.com/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

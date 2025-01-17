@@ -43,7 +43,7 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      axios.post('http://localhost:5000/login', {
+      axios.post('https://art-gallery-backend-dl89.onrender.com/login', {
         email: formData.email,
         password: formData.password
       })

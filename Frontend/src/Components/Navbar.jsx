@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Logout } from "./logout";
+import Logout from "./Logout";
+
 export const Navbar = () => {
   return (
     <nav style={styles.navbar}>
